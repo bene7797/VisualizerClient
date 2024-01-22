@@ -28,7 +28,11 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
   }, [audioSrc, setAnalyser]);
 
   const handlePlay = () => {
-    setAudioSrc(`http://localhost:3000/audio?url=${encodeURIComponent(url)}`);
+    setAudioSrc(
+      `https://concerned-jay-leg-warmers.cyclic.app/audio?url=${encodeURIComponent(
+        url
+      )}`
+    );
     setIsPlaying(true); // Setze isPlaying auf true, wenn das Audio abgespielt wird
   };
 
