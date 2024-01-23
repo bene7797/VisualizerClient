@@ -10,7 +10,6 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
   setIsAudioReady,
 }) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [url, setUrl] = useState<string>("");
   const [audioSrc, setAudioSrc] = useState<string>("");
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
