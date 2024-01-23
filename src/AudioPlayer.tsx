@@ -34,7 +34,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
   };
 
   return (
-    <div className={`InputAudio ${isPlaying ? "moved-up" : ""}`}>
+    <div className={`InputAudio`}>
       <button onClick={handlePlay}>Play</button>
       {audioSrc && (
         <audio
