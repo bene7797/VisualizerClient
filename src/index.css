@@ -83,3 +83,14 @@ html {
 .InputAudio button:hover {
   background-color: #05a300;
 }
+
+.controls-container {
+  max-height: 40px; /* Größere max-height für den geschlossenen Container */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.controls-container.open {
+  max-height: 1000px; /* Eine ausreichend große Zahl, um alle Inhalte anzuzeigen */
+  transition: max-height 0.3s ease-in-out;
+}
