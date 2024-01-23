@@ -85,7 +85,7 @@ html {
 }
 
 .controls-container {
-  max-height: 40px; /* Größere max-height für den geschlossenen Container */
+  max-height: 41px; /* Größere max-height für den geschlossenen Container  */
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
