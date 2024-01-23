@@ -28,22 +28,14 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
   }, [audioSrc, setAnalyser]);
 
   const handlePlay = () => {
-    setAudioSrc(
-      `https://concerned-jay-leg-warmers.cyclic.app/audio?url=${encodeURIComponent(
-        url
-      )}`
-    );
+    // Setzen Sie den Pfad zur MP3-Datei relativ zum Basis-URL der Webseite
+    // Angenommen, die Datei heißt 'meineMusik.mp3'
+    setAudioSrc("/musik/Fly.mp3");
     setIsPlaying(true); // Setze isPlaying auf true, wenn das Audio abgespielt wird
   };
 
   return (
     <div className={`InputAudio ${isPlaying ? "moved-up" : ""}`}>
-      <input
-        type="text"
-        value={url}
-        onChange={(e) => setUrl(e.target.value)}
-        placeholder="Enter YouTube URL"
-      />
       <button onClick={handlePlay}>Play</button>
       {audioSrc && (
         <audio

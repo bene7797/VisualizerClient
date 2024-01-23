@@ -38,7 +38,7 @@ const Visualizer: React.FC<VisualizerProps> = ({
   const frequencyData = new Uint8Array(
     analyser ? analyser.frequencyBinCount : 0
   );
-  const gridSize = 55;
+  const gridSize = 40;
   const boxCount = gridSize * gridSize;
 
   //Positions- und Frequenzzuweisung der Kugeln
@@ -58,9 +58,9 @@ const Visualizer: React.FC<VisualizerProps> = ({
           Math.random() * 255
         )}, ${Math.floor(Math.random() * 255)})`,
         frequencyIndex:
-          Math.random() > 0.2 // 20 prozent der freuquenzen werden auf den bassbereich verteilt, damit es schöner aussieht
-            ? Math.floor(Math.random() * frequencyData.length)
-            : Math.floor(Math.random() * 20) + 30,
+          Math.random() > 0.3 // 20 prozent der freuquenzen werden auf den bassbereich verteilt, damit es schöner aussieht
+            ? Math.floor(Math.random() * (frequencyData.length - 205))
+            : Math.floor(Math.random() * 20),
         ref: React.createRef(),
       });
     }
